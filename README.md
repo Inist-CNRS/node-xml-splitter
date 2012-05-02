@@ -67,7 +67,7 @@ Output:
     xs.on('end', function(counter) {
         console.log(counter+' slices !')
     })
-    xs.parseStream(process.stdin) // or process.stdin.pipe(xs.stream)
+    xs.parseStream(process.stdin)
     
     
     
