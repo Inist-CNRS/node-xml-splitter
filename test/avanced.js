@@ -6,7 +6,7 @@ exports.setUp = function (callback) {
 
 
 exports.t01 = function (test) {
-  var xs = new XMLSplitter('/record')
+  var xs = new XMLSplitter(['/record', '/item'])
   xs.on('data', function (node) {
       test.equal(node['$t'], '1')
     }
@@ -20,7 +20,7 @@ exports.t01 = function (test) {
 }
 
 exports.t02 = function (test) {
-  var i = 0, xs = new XMLSplitter('/record/item')
+  var i = 0, xs = new XMLSplitter(['/record/item1', '/record/item2'])
   xs.on('data', function (node) {
       i++
       if (i === 1) {
@@ -36,5 +36,5 @@ exports.t02 = function (test) {
       test.done()
     }
   )
-  xs.parseString('<record><item>1</item><item>2</item></record>')
+  xs.parseString('<record><item1>1</item1><item2>2</item2></record>')
 }
