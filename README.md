@@ -67,10 +67,11 @@ Output:
     xs.on('end', function(counter) {
         console.log(counter+' slices !')
     })
-    xs.parseStream(process.stdin)
-    
-    
-    
+    xs.parseStream(process.stdin) // or process.stdin.pipe(xs.stream)
+
+
+```
+
 # Tests
 
 Use [nodeunit](https://github.com/caolan/nodeunit) to run the tests.
@@ -94,7 +95,7 @@ Split XML within a stream
 ## Events
 
 ### data
-Emit on inch slice.
+Emit on each slice.
 
 ### end
 Emit on the end of the XML parsing
