@@ -70,6 +70,8 @@ Output:
     xs.parseStream(process.stdin) // or process.stdin.pipe(xs.stream)
 
 
+```
+
 # Tests
 
 Use [nodeunit](https://github.com/caolan/nodeunit) to run the tests.
