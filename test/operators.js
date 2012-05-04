@@ -7,7 +7,7 @@ exports.setUp = function (callback) {
 
 
 exports.t01 = function (test) {
-  var xs = new XMLSplitter('//record')
+  var xs = new XMLSplitter('/record')
   xs.on('data', function (node) {
       test.equal(node['$t'], '1')
     }
@@ -42,20 +42,24 @@ exports.t02 = function (test) {
 
 exports.t03 = function (test) {
   var i = 0, xs = new XMLSplitter('//item')
-  xs.on('data', function (node) {
+  xs.on('data', function (node, path, name) {
       i++
+//      console.log(i, node, path, name)
       if (i === 1) {
         test.equal(node['value'], '1')
       }
       else if (i == 2) {
+        test.equal(node['value'], '3')
+      }
+      else if (i == 3) {
         test.equal(node['value'], '2')
       }
     }
   )
   xs.on('end', function (c) {
-      test.equal(c, 2)
+      test.equal(c, 3)
       test.done()
     }
   )
-  xs.parseString('<record><item value="1"/><item value="2"><record><item value="3"/></record></item></record>')
+  xs.parseString('<record><item value="1">A</item><item value="2"><record><item value="3">B</item></record></item></record>')
 }
