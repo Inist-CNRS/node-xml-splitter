@@ -25,8 +25,6 @@ With [npm](http://npmjs.org) do:
         console.log(counter+' slices !')
     })
     xs.parseString('<root><item><id>1</id></item><item><id>2</id></item></root>')
-
-
 ```
 Output:
 	
@@ -46,8 +44,6 @@ Output:
         console.log(counter+' slices !')
     })
     xs.parseString('<root><item><id>1</id></item><entry><id>2</id></entry></root>')
-
-
 ```
 Output:
 	
@@ -68,8 +64,6 @@ Output:
         console.log(counter+' slices !')
     })
     xs.parseStream(process.stdin) // or process.stdin.pipe(xs.stream)
-
-
 ```
 
 # Tests
@@ -100,9 +94,14 @@ Emit on each slice.
 ### end
 Emit on the end of the XML parsing
 
-## XPath's like
+## XPath's operators
 
-The XPath standard is not supported, only basic paths (included namespaces) and (soon) the // operator is implemented.
+The XPath standard is not supported, only basic paths (included namespaces) and fews operotors is implemented :
+
+* / : /record, /record/item
+* // : //para, /root//item
+* \* : /root/*/item, /root/item/*
+
 I do not think I will implement more operators.
 
 # Also
