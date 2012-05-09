@@ -42,9 +42,30 @@ exports.t02 = function (test) {
 
 exports.t03 = function (test) {
   var i = 0, xs = new XMLSplitter('//item')
+  xs.on('data', function (node) {
+      i++
+      if (i === 1) {
+        test.equal(node['value']['$t'], 'X')
+      }
+      else if (i == 2) {
+        test.equal(node['value']['$t'], 'Y')
+      }
+    }
+  )
+  xs.on('end', function (c) {
+      test.equal(c, 2)
+      test.done()
+    }
+  )
+  xs.parseString('<record><item><value>X</value></item><item><value>Y</value></item></record>')
+}
+
+
+
+exports.t04 = function (test) {
+  var i = 0, xs = new XMLSplitter('//item')
   xs.on('data', function (node, path, name) {
       i++
-//      console.log(i, node, path, name)
       if (i === 1) {
         test.equal(node['value'], '1')
       }
@@ -62,4 +83,5 @@ exports.t03 = function (test) {
     }
   )
   xs.parseString('<record><item value="1">A</item><item value="2"><record><item value="3">B</item></record></item></record>')
+
 }
