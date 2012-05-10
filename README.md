@@ -2,7 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/lindory-project/node-xml-splitter.png?branch=master)](http://travis-ci.org/lindory-project/node-xml-splitter)
 
-It's native and full Javascript class, that provide a easy way to split large XML with one or more paths.
+It's native and full Javascript class, that provide a easy way to split **huge** XML with one or more paths.
 
 # Installation
 
