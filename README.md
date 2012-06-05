@@ -86,6 +86,7 @@ Split XML within a string
 ### parseStream(stream)
 Split XML within a stream
 
+
 ## Events
 
 ### data
@@ -93,6 +94,10 @@ Emit on each slice.
 
 ### end
 Emit on the end of the XML parsing
+
+### error
+Emit when something bad happened
+
 
 ## XPath's operators
 
