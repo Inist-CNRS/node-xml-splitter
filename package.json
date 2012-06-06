@@ -1,32 +1,33 @@
 {
-    "name": "xml-splitter",
-    "version": "1.1.1",
-    "author": "Nicolas Thouvenin <nthouvenin@gmail.com>",
-    "contributors": [],
-    "description": "Provide an easy way to split or extract some nodes of very big XML files",
-    "tags": [
-        "xml",
-        "splitter",
-        "extractor",
-        "reader"
-    ],
-    "homepage": "http://github.com/lindory-project/node-xml-splitter",
-    "scripts": {
-        "test": "nodeunit test/"
-    },
-    "main": "./index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/lindory-project/node-xml-splitter.git"
-    },
-    "dependencies": {
-        "sax": ">=0.4.0"
-    },
-    "devDependencies": {
-        "nodeunit": ">=0.7.3"
-    },
-    "license": "MIT",
-    "engines": {
-        "node": ">=0.6.0"
-    }
+  "name": "xml-splitter",
+  "version": "1.1.2",
+  "author": "Nicolas Thouvenin <nthouvenin@gmail.com>",
+  "contributors": [],
+  "description": "Provide an easy way to split or extract some nodes of very big XML files",
+  "tags": [
+    "xml",
+    "splitter",
+    "extractor",
+    "reader"
+  ],
+  "homepage": "http://github.com/lindory-project/node-xml-splitter",
+  "scripts": {
+    "test": "nodeunit test/"
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lindory-project/node-xml-splitter.git"
+  },
+  "dependencies": {
+    "sax": ">=0.4.0",
+    "clone": ""
+  },
+  "devDependencies": {
+    "nodeunit": ">=0.7.3"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6.0"
+  }
 }
