@@ -92,6 +92,9 @@ Split XML within a stream
 ### data
 Emit on each slice.
 
+### close
+Emit if the stream emit the close event OR if the stream is destroyed
+
 ### end
 Emit on the end of the XML parsing
 
