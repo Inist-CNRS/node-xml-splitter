@@ -77,8 +77,11 @@ Use [nodeunit](https://github.com/caolan/nodeunit) to run the tests.
 
 ## Methods
 
-### constructor XMLSplitter(cutter)
-Create an new splitter, **cutter** is a string or an array of strings that contains path
+### constructor XMLSplitter(cutter, options)
+Create an new splitter, **cutter** is a string or an array of strings that contains path.
+Options are :
+
+* **regular** : To indicate if the cutter is applied to not nested XML parts. By default is true (to optimize the memory consumation)
 
 ### parseString(string, encoding)
 Split XML within a string
