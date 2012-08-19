@@ -60,12 +60,11 @@ exports.t03 = function (test) {
   xs.parseString('<record><item><value>X</value></item><item><value>Y</value></item></record>')
 }
 
-
-
 exports.t04 = function (test) {
-  var i = 0, xs = new XMLSplitter('//item')
+  var i = 0, xs = new XMLSplitter('//item', { regular: true })
   xs.on('data', function (node, path, name) {
       i++
+      test.notEqual(typeof node, 'undefined');
       if (i === 1) {
         test.equal(node['value'], '1')
       }
