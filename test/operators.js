@@ -61,7 +61,7 @@ exports.t03 = function (test) {
 }
 
 exports.t04 = function (test) {
-  var i = 0, xs = new XMLSplitter('//item', { regular: true })
+  var i = 0, xs = new XMLSplitter('//item', { regular: false })
   xs.on('data', function (node, path, name) {
       i++
       test.notEqual(typeof node, 'undefined');
