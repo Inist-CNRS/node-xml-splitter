@@ -1,6 +1,6 @@
 {
   "name": "xml-splitter",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "author": "Nicolas Thouvenin <nthouvenin@gmail.com>",
   "contributors": [],
   "description": "Provide an easy way to split or extract some nodes of very big XML files",
@@ -10,14 +10,14 @@
     "extractor",
     "reader"
   ],
-  "homepage": "http://github.com/lindory-project/node-xml-splitter",
+  "homepage": "http://github.com/touv/node-xml-splitter",
   "scripts": {
     "test": "nodeunit test/"
   },
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lindory-project/node-xml-splitter.git"
+    "url": "https://github.com/touv/node-xml-splitter.git"
   },
   "dependencies": {
     "sax": ">=0.4.0",
