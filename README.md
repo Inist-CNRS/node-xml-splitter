@@ -1,8 +1,8 @@
 # XML Splitter for NodeJS
 
-[![Build Status](https://secure.travis-ci.org/lindory-project/node-xml-splitter.png?branch=master)](http://travis-ci.org/lindory-project/node-xml-splitter)
+[![Build Status](https://secure.travis-ci.org/touv/node-xml-splitter.png?branch=master)](http://travis-ci.org/touv/node-xml-splitter)
 
-It's native and full Javascript class, that provides an easy way to split **huge** XML datas with one or more paths.
+It's native and full Javascript class, that provides an easy way to split **huge** XML data with one or more paths.
 
 # Installation
 
