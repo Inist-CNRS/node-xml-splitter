@@ -4,7 +4,7 @@
   "author": "Nicolas Thouvenin <nthouvenin@gmail.com>",
   "contributors": [],
   "description": "Provide an easy way to split or extract some nodes of very big XML files",
-  "tags": [
+  "keywords": [
     "xml",
     "splitter",
     "extractor",
@@ -20,8 +20,8 @@
     "url": "https://github.com/touv/node-xml-splitter.git"
   },
   "dependencies": {
-    "sax": "=0.4.0",
-    "clone": ""
+    "sax": "~0.5.5",
+    "clone": "~0.1.11"
   },
   "devDependencies": {
     "nodeunit": ">=0.7.3"
