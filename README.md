@@ -82,6 +82,7 @@ Create an new splitter, **cutter** is a string or an array of strings that conta
 Options are :
 
 * **regular** : To indicate if the cutter is applied to not nested XML parts. By default is true (to optimize the memory consumation)
+* **ignoreError** : To NOT emit error event when an XML Error was met . By default is false.
 
 ### parseString(string, encoding)
 Split XML within a string

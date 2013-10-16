@@ -21,8 +21,14 @@ exports.t01 = function (test) {
 }
 
 exports.t02 = function (test) {
-  var xs = new XMLSplitter('//item')
+  var xs = new XMLSplitter('//item', {ignoreError : true})
+  var er = false;
+  xs.on('error', function(e) {
+      er = true;
+    }
+  )
   xs.on('end', function (c) {
+      test.equal(er , false)
       test.equal(c , 2)
       test.done()
   })
