@@ -124,3 +124,7 @@ I do not think I will implement more operators.
 # License
 
 [MIT/X11](./LICENSE)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/touv/node-xml-splitter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
