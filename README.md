@@ -94,7 +94,7 @@ Split XML within a stream
 ## Events
 
 ### data
-Emit on each slice.
+Emit on each slice, three elements: the data node (object), the node's tag name (string), and the node's path (string)
 
 ### close
 Emit if the stream emit the close event OR if the stream is destroyed
@@ -112,7 +112,8 @@ The XPath standard is not supported, only basic paths (included namespaces) and 
 
 * / : /record, /record/item
 * // : //para, /root//item
-* \* : /root/*/item, /root/item/*
+* \* : /root/\*/item, /root/item/\*
+* | : /(record|item), /root/(item|unit)
 
 I do not think I will implement more operators.
 
