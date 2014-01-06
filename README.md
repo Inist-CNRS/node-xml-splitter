@@ -94,7 +94,27 @@ Split XML within a stream
 ## Events
 
 ### data
-Emit on each slice, three elements: the data node (object), the node's tag name (string), and the node's path (string)
+Emits three elements on each slice: the data node (object), the node's tag name (string), and the node's path (string). For example:
+
+````
+var xs = new XMLSplitter('//(item|unit)')
+xs.on('data', function (node, tag, path) {
+    console.log(node);
+    console.log(tag);
+    console.log(path);
+})
+xs.parseString('<record><item><value>X</value></item><unit><value>Y</value></unit></record>')
+````
+Output:
+
+````
+{ value: { '$t': 'X' } }
+item
+/record/item
+{ value: { '$t': 'Y' } }
+unit
+/record/unit
+````
 
 ### close
 Emit if the stream emit the close event OR if the stream is destroyed
