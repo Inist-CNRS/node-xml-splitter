@@ -84,3 +84,28 @@ exports.t04 = function (test) {
   xs.parseString('<record><item value="1">A</item><item value="2"><record><item value="3">B</item></record></item></record>')
 
 }
+
+exports.t05 = function (test) {
+  var i = 0, xs = new XMLSplitter('//(item|unit)')
+  xs.on('data', function (node, tag, path) {
+      i++
+      if (i === 1) {
+        test.equal(node['value']['$t'], 'X')
+        test.equal(tag, 'item')
+        test.equal(path, '/record/item')
+      }
+      else if (i == 2) {
+        test.equal(node['value']['$t'], 'Y')
+        test.equal(tag, 'unit')
+        test.equal(path, '/record/unit')
+      }
+    }
+  )
+  xs.on('end', function (c) {
+      test.equal(c, 2)
+      test.done()
+    }
+  )
+  xs.parseString('<record><item><value>X</value></item><unit><value>Y</value></unit></record>')
+}
+
