@@ -2,7 +2,16 @@
   "name": "xml-splitter",
   "version": "1.2.0",
   "author": "Nicolas Thouvenin <nthouvenin@gmail.com>",
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Stéphane Gully",
+      "url": "https://github.com/kerphi"
+    },
+    {
+      "name": "Alison Rowland",
+      "url": "https://github.com/arowla"
+    }
+  ],
   "description": "Provide an easy way to split or extract some nodes of very big XML files",
   "keywords": [
     "xml",

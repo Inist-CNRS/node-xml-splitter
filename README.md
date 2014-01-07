@@ -4,6 +4,12 @@
 
 It's native and full Javascript class, that provides an easy way to split **huge** XML data with one or more paths.
 
+## Contributors
+
+  * [Nicolas Thouvenin](https://github.com/touv) 
+  * [Stéphane Gully](https://github.com/kerphi)
+  * [Alison Rowland](https://github.com/arowla)
+
 # Installation
 
 With [npm](http://npmjs.org) do:
